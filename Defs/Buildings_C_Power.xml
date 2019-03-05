@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>MintDeepStorage</defName>
+    <label>Deep storage</label>
+    <description>Long term deep storage system</description>
+    <thingClass>DubsMintStorage.Building_storagePool</thingClass>
+    <graphicData>
+      <texPath>MintStorage/Things/RimatomicsBuildings/storagePool</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(7,7)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <castEdgeShadows>true</castEdgeShadows>
+    <passability>PassThroughOnly</passability>
+    <pathCost>600</pathCost>
+    <blockWind>true</blockWind>
+    <fillPercent>0.5</fillPercent>
+    <blockLight>false</blockLight>
+    <holdsRoof>true</holdsRoof>
+    <canOverlapZones>false</canOverlapZones>
+    <designationCategory>Production</designationCategory>
+    <statBases>
+      <MaxHitPoints>350</MaxHitPoints>
+      <WorkToBuild>18000</WorkToBuild>
+      <Flammability>0.0</Flammability>
+    </statBases>
+    <size>(5,5)</size>
+    <rotatable>true</rotatable>
+    <costList>
+      <Steel>450</Steel>
+      <ComponentIndustrial>6</ComponentIndustrial>
+    </costList>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>175</basePowerConsumption>
+        <shortCircuitInRain>false</shortCircuitInRain>
+      </li>
+      <li Class="CompProperties_Breakdownable"/>
+    </comps>
+    <building>
+      <preventDeteriorationInside>true</preventDeteriorationInside>
+      <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+      <defaultStorageSettings>
+        <priority>Important</priority>
+        <filter>
+          <thingDefs>
+          </thingDefs>
+        </filter>
+      </defaultStorageSettings>
+    </building>
+    <inspectorTabs>
+      <li>ITab_Storage</li>
+      <li>DubsMintStorage.ITab_MintInventory</li>
+    </inspectorTabs>
+    <surfaceType>Item</surfaceType>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <placeWorkers>
+      <li>DubsMintStorage.PlaceWorker_StoragePool</li>
+    </placeWorkers>
+  </ThingDef>
+
+</Defs>
