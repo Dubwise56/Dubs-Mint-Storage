@@ -1,7 +1,49 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  
+  <!--<ThingDef ParentName="BuildingBase">
+    <defName>MintDeepStorageExtension</defName>
+    <label>Storage Extension</label>
+    <description>Extends the capacity of deep storage when placed directly adjacent</description>
+    <graphicData>
+      <texPath>MintStorage/Things/RimatomicsBuildings/storagePool</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(7,7)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <castEdgeShadows>true</castEdgeShadows>
+    <passability>PassThroughOnly</passability>
+    <pathCost>600</pathCost>
+    <blockWind>false</blockWind>
+    <fillPercent>0.1</fillPercent>
+    <blockLight>false</blockLight>
+    <holdsRoof>true</holdsRoof>
+    <canOverlapZones>false</canOverlapZones>
+    <designationCategory>Misc</designationCategory>
+    <statBases>
+      <MaxHitPoints>350</MaxHitPoints>
+      <WorkToBuild>18000</WorkToBuild>
+      <Flammability>0.0</Flammability>
+    </statBases>
+    <size>(5,5)</size>
+    <rotatable>true</rotatable>
+    <costList>
+      <Steel>350</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Facility">
+        <maxSimultaneous>10</maxSimultaneous>
+        <mustBePlacedAdjacent>true</mustBePlacedAdjacent>
+      </li>
+    </comps>
+    <surfaceType>Item</surfaceType>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+  </ThingDef>-->
 
   <ThingDef ParentName="BuildingBase">
     <defName>MintDeepStorage</defName>
@@ -18,12 +60,13 @@
     <castEdgeShadows>true</castEdgeShadows>
     <passability>PassThroughOnly</passability>
     <pathCost>600</pathCost>
-    <blockWind>true</blockWind>
+    <blockWind>false</blockWind>
+    <drawGUIOverlay>true</drawGUIOverlay>
     <fillPercent>0.5</fillPercent>
     <blockLight>false</blockLight>
     <holdsRoof>true</holdsRoof>
     <canOverlapZones>false</canOverlapZones>
-    <designationCategory>Production</designationCategory>
+    <designationCategory>Misc</designationCategory>
     <statBases>
       <MaxHitPoints>350</MaxHitPoints>
       <WorkToBuild>18000</WorkToBuild>
@@ -44,6 +87,11 @@
         <shortCircuitInRain>false</shortCircuitInRain>
       </li>
       <li Class="CompProperties_Breakdownable"/>
+      <!--<li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>MintDeepStorageExtension</li>
+        </linkableFacilities>
+      </li>-->
     </comps>
     <building>
       <preventDeteriorationInside>true</preventDeteriorationInside>
@@ -61,7 +109,7 @@
       <li>DubsMintStorage.ITab_MintInventory</li>
     </inspectorTabs>
     <surfaceType>Item</surfaceType>
-    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
     <placeWorkers>
       <li>DubsMintStorage.PlaceWorker_StoragePool</li>
     </placeWorkers>

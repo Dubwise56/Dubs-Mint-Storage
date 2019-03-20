@@ -2,4 +2,5 @@
 <LanguageData>
 <RemoveItem>Remove</RemoveItem>
   <StoreItem>Store</StoreItem>
+  <MintStorageCap>Storage Capacity: {0}/{1}</MintStorageCap>
 </LanguageData>
