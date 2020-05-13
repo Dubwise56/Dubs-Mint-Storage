@@ -1,11 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <ModMetaData>
-	<name>Dubs Mint Storage</name>
+	<name>Dubs Mint Storage - DEV</name>
 	<author>Dubwise</author>
 	<url></url>
 	  <supportedVersions>
     <li>1.0</li>
+      <li>1.1</li>
   </supportedVersions>
-	<description>Storage system based on Rimatomics fuel pools</description>
+  <packageId>Dubwise.DubsMintStorage</packageId>
+	<description>Dev</description>
 </ModMetaData>
